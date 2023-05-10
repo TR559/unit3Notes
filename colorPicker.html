@@ -4,6 +4,26 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .red{
+            background-color:red;
+        }
+        .green{
+            background-color:green;
+        }
+        .blue{
+            background-color:blue;
+        }
+        .pink{
+            color:pink;
+        }
+        .teal{
+            color:teal;
+        }
+        .purple{
+            color:purple;
+        }
+    </style>
 </head>
 <body>
 <div class="container">
@@ -39,6 +59,41 @@
 
     const clearButton = document.getElementById('clear');
 
+   red.addEventListener('click', function (e){
+        content.classList.add('Red');
+    });
+
+    green.addEventListener('click', function (e){
+        content.classList.add('Green');
+    });
+
+    blue.addEventListener('click', function (e){
+        content.classList.add('Blue');
+    });
+
+   pink.addEventListener('click', function (e){
+        content.classList.add('pink');
+    });
+
+   teal.addEventListener('click', function (e){
+        content.classList.add('Teal');
+    });
+
+    purple.addEventListener('click', function (e){
+        content.classList.add('purple');
+    });
+
+    function removeBGcolor(){
+        content.classList.remove('red');
+        content.classList.remove('green');
+        content.classList.remove('Blue');
+    }
+
+    function removeTextcolor(){
+        content.classList.remove('pink');
+        content.classList.remove('teal');
+        content.classList.remove('purple');
+    }
 </script>
 </body>
 </html>
