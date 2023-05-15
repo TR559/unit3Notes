@@ -39,7 +39,8 @@
     firstName.addEventListener('change', nameCreator);
 
     lastName.addEventListener('change', nameCreator);
-    function nameCreator(){
+
+    firstName.addEventListener('change', nameCreator(e){
         let first = firstName.value;
         let last = lastName.value;
         let fullName = `hello ${first} ${last}!`;
@@ -49,7 +50,7 @@
             full.classList.add("hidden")
         }
         full.textContent = `Hello {fullName}!`;
-    }
+    });
 
     clearButton.addEventListener('click', function(e) {
     firstName.value = "";

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div class="content">
+        <h3>What is this?</h3>
+        <h4>I dont want this</h4>
+    </div>
+</div>
+<script>
+    const content = document.querySelector('.content');
+    //replace contents of an html tag using innerHTML
+    content.innerHTML = '<h1 class="gone">I love Zelda</h1><h4>Some other message here</h4>';
+
+    //add a new element in a addition to existing elements
+    const zelda = document.createElement('h1');
+    zelda.innerHTML = ' I love Zelda';
+    content.appendChild(zelda);
+
+    const pokemon = document.createElement('h2');
+    pokemon.innerHTML = ' I love pokemon';
+    content.appendChild(pokemon);
+
+    const Spongebob = document.createElement('h3');
+    Spongebob.innerHTML = ' I love Spongebob';
+    content.appendChild(Spongebob);
+
+    const Elchavodel8 = document.createElement('h4');
+    Elchavodel8.innerHTML = ' I love El chavo del 8';
+    content.appendChild(Elchavodel8);
+
+    const food = document.createElement('h4');
+    food.innerHTML = ' I love pizza';
+    content.insertAdjacentElement('afterend', food);
+
+    const unwantedElement = document.querySelector('h4');
+    unwantedElement.remove();
+
+    const unwantedElement2 = document.querySelector('.gone');
+    unwantedElement2.remove();
+</script>
+</body>
+</html>
