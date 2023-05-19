@@ -27,7 +27,12 @@
             <button name="clear">Clear</button>
             <p></p>
             <button name="Add">Add</button>
+
+            <button name="Subtract">Subtract</button>
+
+            <button name="multiplay">Multiplay</button>
         </div>
+        <div id= "history"></div>
     </div>
 </div>
 <script>
@@ -36,7 +41,9 @@
     const full = document.querySelector('p');
     const clearButton = document.querySelector('[name="clear"]')
     const addNumbers = document.querySelector('[name="Add"]')
-
+    const history = document.getElementById('history')
+    const subtractNumbers = document.querySelector('[name="Subtract"]')
+    const multiplayNumber = document.querySelector('[name="multiplay"']')
 
 
 
@@ -47,9 +54,26 @@
     });
 
     addNumbers.addEventListener('click', function(e){
-        equation=document.createElement('p')
-        equationinnerHTML=
-        `${firstName}+${SecondNumber}=${FirstNumber + SecondNumber}`
+        let first =+FirstNumber.value;
+        let second =+SecondNumber.value;
+        let equation=document.createElement('p')
+        equation.innerHTML=  `${first}+${second}=${first + second}`
+        history.appendChild(equation)
+    });
+
+    subtractNumbers.addEventListener('click', function(e){
+        let first =+FirstNumber.value;
+        let second =+SecondNumber.value;
+        let equation=document.createElement('p')
+        equation.innerHTML=  `${first}-${second}=${first - second}`
+        history.appendChild(equation)
+    });
+
+    MultiplyNumbers.addEventListener('click', function(e){
+        let first =+FirstNumber.value;
+        let second =+SecondNumber.value;
+        let equation=document.createElement('p')
+        equation.innerHTML=  `${first}*${second}=${first * second}`
         history.appendChild(equation)
     });
 </script>
